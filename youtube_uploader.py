@@ -1,3 +1,9 @@
+"""
+This script uses googles 'youtube data api v3' to post a video
+where if under 60s gets uploaded as a short to a particular account
+
+"""
+
 import httplib2
 import os
 import random

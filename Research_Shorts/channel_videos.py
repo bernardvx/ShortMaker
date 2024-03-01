@@ -1,3 +1,10 @@
+"""
+This script takes in a channel about page and
+return info about that account like:
+when joined, how many videos posted, total views
+
+"""
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options  

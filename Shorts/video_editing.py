@@ -1,3 +1,9 @@
+"""
+This script takes in a directory of  youtube videos and their 
+generated subs(or any translated subtitle) and creates 30sec parts of that video
+
+"""
+
 from  moviepy.editor import VideoFileClip, clips_array, TextClip, CompositeVideoClip
 from moviepy.video.tools.subtitles import SubtitlesClip, file_to_subtitles
 import os

@@ -1,3 +1,9 @@
+"""
+This scripts plots different data correlations from the 
+Research Shorts database of 120k+ short videos
+
+"""
+
 import numpy as np
 import psycopg2
 from datetime import datetime

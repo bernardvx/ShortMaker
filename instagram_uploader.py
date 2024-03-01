@@ -1,3 +1,9 @@
+"""
+This script uses 'Instagram Graph Api' to upload reels to instagram
+from which with one tap can be uploaded to facebook as facebooks graph api
+is very confusing and not worth the time for the mom xp
+"""
+
 import requests
 import time
 import json

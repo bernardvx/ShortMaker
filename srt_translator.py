@@ -1,3 +1,8 @@
+"""
+This script translates subtitles to the specific language of your choosing using OpenAIs GPT3-turbo api. 
+
+"""
+
 import srt
 from openai import OpenAI 
 import json
