@@ -16,15 +16,14 @@ instagram_account_id='17841464231097531'
 facebook_account_id ='244613845382488'
 
 
-video_url='https://media.publit.io/file/Friends-Everybody-Hates-Chandler-ad-Part-1-T.mp4'
-caption = 'Friends Chandler is hated at work \ncheckout the friends store in the bio for merch actualyy go to elmure . com'
+
 #this below works , need to be carefull on the video specs as per reel requirements instagram graph api
 #and access token that never expires did not work for the moment so generating a new one works.
 
 
 graph_url = 'https://graph.facebook.com/v18.0/'
-def upload_video_to_insta(video_url=video_url,
-               caption=caption,
+def upload_video_to_insta(video_url,
+               caption,
                instagram_account_id=instagram_account_id,
                access_token=access_token):
     
@@ -52,8 +51,4 @@ def post_video_on_insta(creation_id ='',instagram_account_id='',access_token='')
     return response
 
 
-response_ig = upload_video_to_insta()
-time.sleep(25)
-print(response_ig)
-post_video_on_insta(creation_id=response_ig['id'], instagram_account_id=instagram_account_id ,access_token=access_token )
-print('that was the instagram reel')
+
