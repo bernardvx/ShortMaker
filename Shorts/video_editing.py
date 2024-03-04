@@ -39,7 +39,7 @@ for video in videos:
     subtitles = SubtitlesClip(srt_file, generator)
     subtitles = subtitles.subclip(0, content.duration)
 
-    content, ad= content.subclip(0, content.duration), ad.subclip(0, content.duration)
+    ad=  ad.subclip(0, content.duration)
     content = content.crop(x1=350, x2=1570) #remove 360px form each side of the width of the video
  
 
