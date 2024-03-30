@@ -21,6 +21,27 @@ link_title = {
    # 'PPNMMR33yhc': 'Pretty Little Liars - Spencers Intervention',
    # 'XcCVD3cAnoI': 'Pretty Little Liars - "Miss Me x 100"',
    # '4QCnVbDaltU': 'Pretty Little Liars - Ezra is Shot - "A is for Answers"',
+   'Jq0tg56DV7A': 'Gossip Girl - the wedding scene',
+   'EYBeuTntK90': ' Blair dancing for Chuck at a burlesque club',
+   '4sWTBMoyr4I': "CHUCK SAYS 'I LOVE YOU' TO BLAIR 'The Goodbye Gossip Gir'",
+   'sQjDTHpMBzw': ' Blair storms off the photo shoot 📸 Gossip Girl',
+   'FrGWGYAC4r4': 'Nate and Chuck season 1  logoless',
+   '-IpygQbGG34': 'Chuck and Blair break up scene season 3',
+   'wR9iPwX3JsE': ' Blair and Jenny Popularity War',
+   'W9vwRXiXv14': 'Gossip Girl 4x10 Jenny & Blair',
+   '3QjNuEtH-Yo': "End of Blair and Louie's Wedding Party",
+   '7kk-vkp1PNI': "Blair tells Chuck she's pregnant Monkey comforts him",
+   'upor6jqgDyQ': 'Serena and Blair in Paris',
+   #lucifer
+   'BVGX_5hVTf4': 'Chloe finds out who Lucifer really is ',
+   'JNN3_Du-2Nk': 'Lucifer- S2E13 Ending Scene',
+   'vAN41c_vGKA': "Amenadiel explains Chloe's gift",
+   'I3DfQFU0Heg': 'You make me vulnerable',
+   'dSz01YPapRI': 'God and Lucifer do therapy',
+   'y2QtzGlGZMM': "God tells Lucifer that he's losing his powers",
+   'ulZaXzhUDWs': 'Chloe Meets God',
+   'k5StRockQrM': 'Lucifer and chloe first kiss',
+   
 
 }
 
