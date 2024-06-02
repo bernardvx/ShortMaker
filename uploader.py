@@ -1,14 +1,14 @@
 import instagram_uploader
-#import youtube_uploader
+import youtube_uploader
 import time
 import os
-from publitio import PublitioAPI
+from googleapiclient.errors import HttpError
 
-publitio_api = PublitioAPI('AXsb12Qjld34v54mtXPu', 'wrmB9d7APJQHmcnMwje0gJ3JiH4QvWpg')
-response = publitio_api.list_files()
 
+CLIENT_SECRETS_FILE = "/home/mackintosh/Projects/Shop/client_secrets.json"
+youtube = youtube_uploader.get_authenticated_service()
 dirc= '/home/mackintosh/Projects/Shop/Shorts/'
-online_dir = 'https://media.publit.io/file/'
+online_dir = 'https://elmure.com/api/shorts/dl?filePath=shorts$$EN_fashionablemysteries$$'#change to the actuall link
 os.chdir(dirc)
 
 vids = {}
@@ -17,31 +17,35 @@ for i in sorted(os.listdir()):
     if i.endswith('.mp4'):
         vids[f'{i}'] = f"{i.replace('_', ' ').replace('.mp4', '')}. \nCheck out the link in bio for a suprise #GossipGirlFan #PLLAddict #SceneStealer #Fashionista #TVObsessed #DiscountCode"
 
-#video_url='http://80.90.94.66/shorts_en_fashion/Blair_and_Chuck_Ill_always_love_you_Part_1.mp4'
-#caption = 'Blair_and_Chuck_Ill_always_love_you_Part_1  #girlss #love'.replace('_', " ")
-
-
 instagram_account_id = instagram_uploader.instagram_account_id
 access_token = instagram_uploader.access_token
 
 uploaded = 0
 
+
 for link, caption in vids.items(): 
-    #upload 7 shorts with 2h increments 
-    while uploaded < 7:
-
-
-        response_ig = instagram_uploader.upload_video_to_insta(video_url=f"{online_dir}{link.replace('_', '-')}", caption=caption)
-        print(link.replace('_', '-'), caption)
+    #upload 5 shorts with .5h increments 
+    while uploaded < 5:
+        #print(dirc, link, caption)
+        #upload video on youtube, make a better description and put emojis on the tittles
+        """
+        try:
+            youtube_uploader.initialize_upload(youtube, file=f'{dirc}{link}', title=caption[80], description=caption, tags=None, category='22', privacyStatus='public')
+        except HttpError as e:
+            print("An HTTP error %d occurred:\n%s" % (e.resp.status, e.content))
+        """
+        #posts video on IG
+        response_ig = instagram_uploader.upload_video_to_insta(video_url=f"{online_dir}{link}", caption=caption)
+        print(f'{online_dir}{link}', caption)
         while True:
             
-            time.sleep(25)
+            time.sleep(65)
             print(response_ig)
             try:
                 post = instagram_uploader.post_video_on_insta(creation_id=response_ig['id'], instagram_account_id=instagram_account_id ,access_token=access_token )
                      
             except:
-                time.sleep(10)
+                time.sleep(35)
                 if 'id' not in post.keys:
                     print('Trying again to post it')
                     continue
@@ -58,7 +62,7 @@ for link, caption in vids.items():
         print('that was the instagram reel')
         uploaded += 1
         print('videos uploaded: ', uploaded)
-        time.sleep(120)
+        time.sleep(1800)
         break
         
 
