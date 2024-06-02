@@ -122,8 +122,9 @@ def resumable_upload(insert_request):
             print("Sleeping %f seconds and then retrying..." % sleep_seconds)
             time.sleep(sleep_seconds)
 
-dir = '/home/mackintosh/Projects/Shop/Ucontent_subs/'
-file = f'{dir}Friends_Everybody_Hates_Chandlerlol_Part_1.mp4'
+"""
+dir = '/home/mackintosh/Projects/Shop/Shorts/'
+file = f'{dir}You_make_me_vulnerable_Part_1.mp4'
 title = 'Friends_Everybody_Hates_Chandler_Part_5'.replace('_', ' ')
 description = f'{title}\nYou can find friends type merch on the link in the bio'
 
@@ -132,3 +133,5 @@ try:
     initialize_upload(youtube, file, title, description, tags=None, category='22', privacyStatus='public')
 except HttpError as e:
     print("An HTTP error %d occurred:\n%s" % (e.resp.status, e.content))
+
+"""
