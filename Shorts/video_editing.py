@@ -8,7 +8,7 @@ from  moviepy.editor import VideoFileClip, clips_array, TextClip, CompositeVideo
 from moviepy.video.tools.subtitles import SubtitlesClip, file_to_subtitles
 import os
 import contextlib
-
+import time
 
 #init
 b = 0 #beginning of clip (s)
@@ -72,7 +72,8 @@ for video in videos:
 
                 i, b, e =0, 0, 30
                 os.rename(f'{dir}{video}', f'{edited_dir}{video}')
-
+                
+                time.sleep(60)
                 break
     
     
