@@ -49,7 +49,7 @@ for video in videos:
         subtitles = subtitles.subclip(0, content.duration)
 
         t_ad, b_ad =  t_ad.subclip(0, content.duration), b_ad.subclip(0, content.duration)
-        content = content.crop(x1=420, x2=1500) #remove 360px form each side of the width of the video
+        content = content.crop(x1=200, x2=1720) #remove 360px form each side of the width of the video
     
 
         content = content.resize((1080, 1012)) 
